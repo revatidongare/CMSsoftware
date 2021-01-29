@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 29, 2021 at 01:20 PM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.3.23
+-- Generation Time: Nov 27, 2019 at 06:06 PM
+-- Server version: 10.3.15-MariaDB
+-- PHP Version: 7.2.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -52,22 +53,35 @@ INSERT INTO `tbladmin` (`ID`, `AdminName`, `UserName`, `MobileNumber`, `Email`, 
 
 CREATE TABLE `tblclient` (
   `ID` int(10) NOT NULL,
-  `CustomerName` varchar(120) DEFAULT NULL,
-  `BirthDate` date DEFAULT NULL,
-  `Anniversary` date DEFAULT NULL,
+  `AccountID` int(10) DEFAULT NULL,
+  `AccountType` varchar(50) DEFAULT NULL,
+  `ContactName` varchar(120) DEFAULT NULL,
+  `CompanyName` varchar(120) DEFAULT NULL,
+  `Address` varchar(200) DEFAULT NULL,
+  `City` varchar(120) DEFAULT NULL,
+  `State` varchar(120) DEFAULT NULL,
+  `ZipCode` int(10) DEFAULT NULL,
+  `Workphnumber` bigint(10) DEFAULT NULL,
+  `Cellphnumber` bigint(10) DEFAULT NULL,
   `Otherphnumber` bigint(10) DEFAULT NULL,
-  `Email` varchar(200) DEFAULT NULL
+  `Email` varchar(200) DEFAULT NULL,
+  `WebsiteAddress` varchar(200) DEFAULT NULL,
+  `Notes` mediumtext DEFAULT NULL,
+  `Password` varchar(200) NOT NULL,
+  `CreationDate` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tblclient`
 --
 
-INSERT INTO `tblclient` (`ID`, `CustomerName`, `BirthDate`, `Anniversary`, `Otherphnumber`, `Email`) VALUES
-(11, 'vb', '0000-00-00', '0000-00-00', 1113455, 'vaish1096@gmail.com'),
-(12, 'vaishnavi', '2021-01-07', '0000-00-00', 1113455, 'demo2@gmail.com'),
-(13, 'vaishnavi', '1996-10-10', '0000-00-00', 1113455, 'demo2@gmail.com'),
-(14, 'vb', '2021-01-05', '2021-01-01', 1113455, 'demo2@gmail.com');
+INSERT INTO `tblclient` (`ID`, `AccountID`, `AccountType`, `ContactName`, `CompanyName`, `Address`, `City`, `State`, `ZipCode`, `Workphnumber`, `Cellphnumber`, `Otherphnumber`, `Email`, `WebsiteAddress`, `Notes`, `Password`, `CreationDate`) VALUES
+(1, 900370752, 'Active Account', 'Sanjay Malhotra', 'ABC Private Limited', 'ABC Private Limited\r\nB-150,Okhla New Delhi', 'New Delhi', 'Delhi/NCR', 1100096, 8888888888, 4354354354, 4564645646, 'abc@gmail.com', 'www.abc.com', 'Good Client', '202cb962ac59075b964b07152d234b70', '2019-10-22 04:40:11'),
+(2, 884010538, 'Active Account', 'Sidharth Sukla', 'Infosys Pvt Ltd', 'Infosys Pvt Ltd\r\nC-123, Sector 15 Noida ', 'Noida', 'NCR', 1321121, 4454545454, 7787878787, 5454545454, 'infosys@gmail.com', 'www.infosys.com', 'hfghfhffgjgjghgbjhgbhjgjhgvh', '202cb962ac59075b964b07152d234b70', '2019-10-22 05:24:39'),
+(3, 809338201, 'Contact/Lead', 'Naveen Singh', 'ghj pvt ltd', 'ghj pvt ltd\r\ng-127 Delhi', 'New Delhi', 'Delhi/NCR', 1100096, 4464654665, 4654654646, 7879877897, 'ghj@gmail.com', 'www.ghj.com', 'dty jhgyujiou bgyt htuyy c iu gb m oojf', '202cb962ac59075b964b07152d234b70', '2019-10-22 05:26:50'),
+(4, 639974991, 'Contact/Lead', 'Abir Rajwansh', 'KML PVT LTD', 'KML PVT LTD\r\nh-224 sector 62, Noida(NCR)', 'Noida', 'Delhi/NCR', 5465456, 5523235656, 8985652332, 5451212451, 'kml@gmail.com', 'www.kml.com', 'hjkh khk h khkhkhiu uy uyt uytgyu', '202cb962ac59075b964b07152d234b70', '2019-10-22 05:29:59'),
+(5, 602410634, 'Active Account', 'Kundan Shah', 'JK Enterprises', 'JK Enterprises\r\nH-120,Shivala Varanasi', 'Varanasi', 'UP', 221001, 1213465464, 1645489799, 3465465465, 'jk@gmail.com', 'www.jk.com', 'ghjgjguyjgbhjghjghgcfdfgdgf', '202cb962ac59075b964b07152d234b70', '2019-10-23 10:42:52'),
+(6, 426546224, 'Active Account', 'Anuj Kumar', 'PHPGurukul Programming Blog', 'New Delhi', 'New Delhi', 'Delhi', 110001, 9354778033, 9354778033, 9354778033, 'phpgurukulofficial@gmail.com', 'https://phpgurukul.com', 'New User', 'f925916e2754e5e03f75dd58a5733251', '2019-11-27 16:00:24');
 
 -- --------------------------------------------------------
 
@@ -214,7 +228,7 @@ ALTER TABLE `tbladmin`
 -- AUTO_INCREMENT for table `tblclient`
 --
 ALTER TABLE `tblclient`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tblinvoice`
