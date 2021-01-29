@@ -3,7 +3,7 @@
 <html lang="zxx">
 
 <head>
-    <title>Client Management System || Home Page</title>
+    <title>CRM|| Home Page</title>
     
     <script>
         addEventListener("load", function () {
@@ -33,7 +33,7 @@
                 <div class="header-agile">
                     <h1>
                         <a class="navbar-brand" href="index.php">
-                           CMS
+                           CRM SYSTEM
                         </a>
                     </h1>
                 </div>
@@ -44,10 +44,10 @@
                     >
                     <a class="nav-link" href="admin/index.php">Admin</a>
                 </button>
-                <button type="button" class="btn btn-block mt-lg-5 mt-3 w3ls-btn p-1 btn-theme text-white  text-uppercase font-weight-bold" 
+                <!--<button type="button" class="btn btn-block mt-lg-5 mt-3 w3ls-btn p-1 btn-theme text-white  text-uppercase font-weight-bold" 
                     >
                     <a class="nav-link" href="client/index.php">Client</a>
-                </button>
+                </button>-->
                 </ul>
                 
             </div>
@@ -58,8 +58,8 @@
                 <div id="home" class="w3ls-banner d-flex  align-items-center justify-content-center">
                     <div class="bnr-w3pvt text-center">
                         <h4>Welcome to!!</h4>
-                        <h2 class="bnr-txt-w3">Client Management System</h2>
-                        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae</p>
+                        <h2 class="bnr-txt-w3">CRM SYSTEM</h2>
+                        <p>Customer Relationship Management</p>
                        
                     </div>
                 </div>

@@ -10,7 +10,7 @@ if (strlen($_SESSION['clientmsaid']==0)) {
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Client Management Sysytem || Manage Client </title>
+	<title>CRM|| Manage Client </title>
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!-- Bootstrap Core CSS -->
 	<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
@@ -51,11 +51,11 @@ if (strlen($_SESSION['clientmsaid']==0)) {
 						<div class="graph">
 							<div class="tables">
 								<table class="table" border="1"> <thead> <tr> <th>#</th> 
-									<th>Account ID</th>
-									 <th>Account Type</th> 
-									 <th>Contact Name</th>
-									 <th>Company Name</th>
-									 <th>Mobile Number</th>
+									<th>Customer Name</th>
+									 <th>Phone Number</th> 
+									 <th>Email Address</th>
+									 <th>Birth Date</th>
+									 <th>Anniversary Date</th>
 									 <th>Setting</th>
 									  </tr>
 									   </thead>
@@ -73,11 +73,11 @@ foreach($results as $row)
 {               ?>
 									     <tr class="active">
 									      <th scope="row"><?php echo htmlentities($cnt);?></th>
-									       <td><?php  echo htmlentities($row->AccountID);?></td>
-									        <td><?php  echo htmlentities($row->AccountType);?></td>
-									         <td><?php  echo htmlentities($row->ContactName);?></td> 
-									         <td><?php  echo htmlentities($row->CompanyName);?></td>
-									         <td><?php  echo htmlentities($row->Workphnumber);?></td>
+									       <td><?php  echo htmlentities($row->CustomerName);?></td>
+									        <td><?php  echo htmlentities($row->Otherphnumber);?></td>
+									         <td><?php  echo htmlentities($row->Email);?></td> 
+									         <td><?php  echo htmlentities($row->BirthDate);?></td>
+									         <td><?php  echo htmlentities($row->Anniversary);?></td>
 									        <td><a href="edit-client-details.php?editid=<?php echo $row->ID;?>">Edit</a>  ||  <a href="add-client-services.php?addid=<?php echo $row->ID;?>">Assign Services</a></td>
 									     </tr>
 									     <?php $cnt=$cnt+1;}} ?>

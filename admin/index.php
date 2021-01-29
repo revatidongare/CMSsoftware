@@ -64,7 +64,7 @@ echo "<script>alert('Invalid Details');</script>";
 
 					<div class="new">
 						<p><a href="forgot-password.php">Forgot Password?</a></p>
-						<p><a href="../index.php">Back Home!!</a></p>
+						<p><a href="admin/index.php">Back Home!!</a></p>
 
 						<div class="clearfix"></div>
 					</div>
