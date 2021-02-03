@@ -116,16 +116,16 @@ echo "<script>window.location.href ='add-client.php'</script>";
 		<option value="Unknown">Unknown</option>
 		
 	</select> </div>-->
-	<div class="form-group"> <label for="exampleInputEmail1">Customer Name</label> <input type="text" name="cname" placeholder="Contact Name" value="" class="form-control" required='true'> </div>
+	<div class="form-group col-md-6"> <label for="exampleInputEmail1">Customer Name</label> <input type="text" name="cname" placeholder="Customer Name" value="" class="form-control" required='true'> </div>
 	<!--<div class="form-group"> <label for="exampleInputEmail1">Company Name</label> <input type="text" name="comname" placeholder="Company Name" value="" class="form-control" required='true'> </div>
 	<div class="form-group"> <label for="exampleInputEmail1">Address</label> <textarea type="text" name="address" placeholder="Address" value="" class="form-control" required='true' rows="4" cols="3"></textarea> </div>
 	<div class="form-group"> <label for="exampleInputEmail1">City</label> <input type="text" name="city" placeholder="City" value="" class="form-control" required='true'> </div>
 	<div class="form-group"> <label for="exampleInputEmail1">State</label> <input type="text" name="state" placeholder="State" value="" class="form-control" required='true'> </div>
 	<div class="form-group"> <label for="exampleInputEmail1">Zip Code</label> <input type="text" name="zcode" placeholder="Zip Code" value="" class="form-control" required='true'> </div>-->
 	
-	<div class="form-group"> <label for="exampleInputEmail1">Phone Number</label><input type="text" name="ophnumber" value="" placeholder="Phone Number"  class="form-control" maxlength='10' pattern="[0-9]+"> </div>
-	<div class="form-group"> <label for="exampleInputEmail1">Email Address</label> <input type="email" name="email" value="" placeholder="Email address" class="form-control" required='true'> </div> 
-	<div class="form-group"> <label for="birthday">Birth Date</label><input type="date" name="birthday" value="" placeholder="DOB"  class="form-control"  required='true'> </div>
+	<div class="form-group col-md-6"> <label for="exampleInputEmail1">Phone Number</label><input type="text" name="ophnumber" value="" placeholder="Phone Number"  class="form-control" maxlength='10' pattern="[0-9]+"> </div>
+	<div class="form-group col-md-6"> <label for="exampleInputEmail1">Email Address</label> <input type="email" name="email" value="" placeholder="Email address" class="form-control" required='true'> </div> 
+	<div class="form-group col-md-6"> <label for="birthday">Birth Date</label><input type="date" name="birthday" value="" placeholder="DOB"  class="form-control"  required='true'> </div>
 	<!--<div class="form-group"> <label for="anniversary">Anniversary Date</label><input type="date" name="anniversary" value="" placeholder="DOA"  class="form-control"  > </div>-->
 <!--<div class="form-group"> <label for="exampleInputEmail1">Password</label>
 	<input placeholder="password" type="password" name="password" required="true" id="password" class="form-control">
@@ -134,7 +134,7 @@ echo "<script>window.location.href ='add-client.php'</script>";
 	<div class="form-group"> <label for="exampleInputEmail1">Notes</label> <textarea type="text" name="notes" placeholder="Notes" value="" class="form-control" required='true' rows="4" cols="3"></textarea> </div>-->
 
 	
-	 <button type="submit" class="btn btn-default" name="submit" id="submit">Save</button> </form> 
+	 <center><button type="submit" class="btn btn-default" name="submit" id="submit">Save</button></center> </form> 
 </div>
 </div>
 </div> 
