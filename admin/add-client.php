@@ -19,13 +19,13 @@ $clientmsaid=$_SESSION['clientmsaid'];
  //$state=$_POST['state'];
  //$zcode=$_POST['zcode'];
  $birthday=$_POST['birthday'];
- $anniversary=$_POST['anniversary'];
+ //$anniversary=$_POST['anniversary'];
  $ophnumber=$_POST['ophnumber'];
  $email=$_POST['email'];
  //$websiteadd=$_POST['websiteadd'];
  //$notes=$_POST['notes'];
  
-$sql="insert into tblclient(CustomerName,BirthDate,Anniversary,Otherphnumber,Email)values(:cname,:birthday,:anniversary,:ophnumber,:email)";
+$sql="insert into tblclient(CustomerName,BirthDate,Otherphnumber,Email)values(:cname,:birthday,:ophnumber,:email)";
 $query=$dbh->prepare($sql);
 //$query->bindParam(':acctid',$acctid,PDO::PARAM_STR);
 //$query->bindParam(':accttype',$accttype,PDO::PARAM_STR);
@@ -36,7 +36,7 @@ $query->bindParam(':cname',$cname,PDO::PARAM_STR);
 //$query->bindParam(':state',$state,PDO::PARAM_STR);
 //$query->bindParam(':zcode',$zcode,PDO::PARAM_STR);
 $query->bindParam(':birthday',$birthday,PDO::PARAM_STR);
-$query->bindParam(':anniversary',$anniversary,PDO::PARAM_STR);
+//$query->bindParam(':anniversary',$anniversary,PDO::PARAM_STR);
 $query->bindParam(':ophnumber',$ophnumber,PDO::PARAM_STR);
 $query->bindParam(':email',$email,PDO::PARAM_STR);
 //$query->bindParam(':websiteadd',$websiteadd,PDO::PARAM_STR);
@@ -126,7 +126,7 @@ echo "<script>window.location.href ='add-client.php'</script>";
 	<div class="form-group"> <label for="exampleInputEmail1">Phone Number</label><input type="text" name="ophnumber" value="" placeholder="Phone Number"  class="form-control" maxlength='10' pattern="[0-9]+"> </div>
 	<div class="form-group"> <label for="exampleInputEmail1">Email Address</label> <input type="email" name="email" value="" placeholder="Email address" class="form-control" required='true'> </div> 
 	<div class="form-group"> <label for="birthday">Birth Date</label><input type="date" name="birthday" value="" placeholder="DOB"  class="form-control"  required='true'> </div>
-	<div class="form-group"> <label for="anniversary">Anniversary Date</label><input type="date" name="anniversary" value="" placeholder="DOA"  class="form-control"  > </div>
+	<!--<div class="form-group"> <label for="anniversary">Anniversary Date</label><input type="date" name="anniversary" value="" placeholder="DOA"  class="form-control"  > </div>-->
 <!--<div class="form-group"> <label for="exampleInputEmail1">Password</label>
 	<input placeholder="password" type="password" name="password" required="true" id="password" class="form-control">
 </div>

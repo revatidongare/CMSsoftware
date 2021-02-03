@@ -55,7 +55,7 @@ if (strlen($_SESSION['clientmsaid']==0)) {
 									 <th>Phone Number</th> 
 									 <th>Email Address</th>
 									 <th>Birth Date</th>
-									 <th>Anniversary Date</th>
+									 <!--<th>Anniversary Date</th>-->
 									 <th>Setting</th>
 									  </tr>
 									   </thead>
@@ -77,8 +77,8 @@ foreach($results as $row)
 									        <td><?php  echo htmlentities($row->Otherphnumber);?></td>
 									         <td><?php  echo htmlentities($row->Email);?></td> 
 									         <td><?php  echo htmlentities($row->BirthDate);?></td>
-									         <td><?php  echo htmlentities($row->Anniversary);?></td>
-									        <td><a href="edit-client-details.php?editid=<?php echo $row->ID;?>">Edit</a>  ||  <a href="add-client-services.php?addid=<?php echo $row->ID;?>">Assign Services</a></td>
+									         <!--<td><?php  echo htmlentities($row->Anniversary);?></td>-->
+									        <td><a href="edit-client-details.php?editid=<?php echo $row->ID;?>">Edit</a>  || <!-- <a href="add-client-services.php?addid=<?php echo $row->ID;?>">Assign Services</a>--></td>
 									     </tr>
 									     <?php $cnt=$cnt+1;}} ?>
 									     </tbody> </table> 
