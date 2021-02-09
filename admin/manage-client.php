@@ -78,7 +78,7 @@ foreach($results as $row)
 									         <td><?php  echo htmlentities($row->Email);?></td> 
 									         <td><?php  echo htmlentities($row->BirthDate);?></td>
 									         <!--<td><?php  echo htmlentities($row->Anniversary);?></td>-->
-									        <td><a href="edit-client-details.php?editid=<?php echo $row->ID;?>">Edit</a>  || <!-- <a href="add-client-services.php?addid=<?php echo $row->ID;?>">Assign Services</a>--></td>
+									        <td><a href="edit-client-details.php?editid=<?php echo $row->ID;?>">Edit</a>  ||  <a href="add-client-services.php?addid=<?php echo $row->ID;?>">Assign Menu</a></td>
 									     </tr>
 									     <?php $cnt=$cnt+1;}} ?>
 									     </tbody> </table> 
