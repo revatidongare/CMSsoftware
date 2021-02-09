@@ -21,8 +21,8 @@ $query->bindParam(':price',$price,PDO::PARAM_STR);
 
    $LastInsertId=$dbh->lastInsertId();
    if ($LastInsertId>0) {
-    echo '<script>alert("Service has been added.")</script>';
-echo "<script>window.location.href ='add-services.php'</script>";
+    echo '<script>alert("Menu has been added.")</script>';
+echo "<script>window.location.href ='add-menu.php'</script>";
   }
   else
     {
@@ -36,7 +36,7 @@ echo "<script>window.location.href ='add-services.php'</script>";
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Client Management Sysytem|| Add Services</title>
+	<title>Client Management Sysytem|| Add Menu</title>
 
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!-- Bootstrap Core CSS -->
@@ -71,13 +71,13 @@ echo "<script>window.location.href ='add-services.php'</script>";
 <div class="sub-heard-part">
 <ol class="breadcrumb m-b-0">
 <li><a href="dashboard.php">Home</a></li>
-<li class="active">Add Services</li>
+<li class="active">Add Menu</li>
 </ol>
 </div>	
 					<!--/sub-heard-part-->	
 					<!--/forms-->
 <div class="forms-main">
-<h2 class="inner-tittle">Add Services </h2>
+<h2 class="inner-tittle">Add Menu </h2>
 <div class="graph-form">
 <div class="form-body">
 <form method="post"> 
@@ -122,6 +122,10 @@ echo "<script>window.location.href ='add-services.php'</script>";
 
 	<!-- Bootstrap Core JavaScript -->
 	<script src="js/bootstrap.min.js"></script>
+
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
 </body>
 </html>
 <?php }  ?>

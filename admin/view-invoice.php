@@ -50,7 +50,7 @@ if (strlen($_SESSION['clientmsaid']==0)) {
 						<h3 class="inner-tittle two">Invoice Details </h3>
 <?php
 $invid=intval($_GET['invoiceid']);
-$sql="select distinct tblclient.ContactName,tblclient.CompanyName,tblclient.Workphnumber,tblclient.Email,tblclient.AccountID,tblinvoice.BillingId,tblinvoice.PostingDate from  tblclient   
+$sql="select distinct tblclient.CustomerName,tblclient.BirthDate,tblclient.Otherphnumber,tblclient.Email,tblinvoice.BillingId,tblinvoice.PostingDate from  tblclient   
 	join tblinvoice on tblclient.ID=tblinvoice.Userid  where tblinvoice.BillingId=:invid";
 $query = $dbh -> prepare($sql);
 $query->bindParam(':invid',$invid,PDO::PARAM_STR);

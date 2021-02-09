@@ -52,15 +52,15 @@ if (strlen($_SESSION['clientmsaid']==0)) {
 							<div class="tables">
 								<table class="table" border="1"> <thead> <tr> <th>#</th> 
 									<th>Invoice Id</th>
-									<th>Company Name</th>
-									 <th>Contact Name</th> 
+									<th>Contact No</th>
+									 <th> Name </th> 
 									 <th>Invoice Date</th>
 									 <th>Action</th>
 									  </tr>
 									   </thead>
 									    <tbody>
 									    	<?php
-$sql="select distinct tblclient.ContactName,tblclient.CompanyName,tblinvoice.BillingId,tblinvoice.PostingDate from  tblclient   
+$sql="select distinct tblclient.CustomerName,tblclient.otherphnumber,tblinvoice.BillingId,tblinvoice.PostingDate from  tblclient   
 	join tblinvoice on tblclient.ID=tblinvoice.Userid  order by tblinvoice.ID desc";
 $query = $dbh -> prepare($sql);
 $query->execute();
@@ -74,8 +74,8 @@ foreach($results as $row)
 									     <tr class="active">
 									      <th scope="row"><?php echo htmlentities($cnt);?></th>
 									       <td><?php  echo htmlentities($row->BillingId);?></td>
-									       <td><?php  echo htmlentities($row->CompanyName);?></td>
-									        <td><?php  echo htmlentities($row->ContactName);?></td>
+									       <td><?php  echo htmlentities($row->otherphnumber);?></td>
+									        <td><?php  echo htmlentities($row->CustomerName);?></td>
 									         <td><?php  echo htmlentities($row->PostingDate);?></td> 
 									         
 									        <td><a href="view-invoice.php?invoiceid=<?php  echo $row->BillingId;?>">View</a></td>

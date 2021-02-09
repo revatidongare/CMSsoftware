@@ -1,6 +1,6 @@
  <div class="sidebar-menu">
     <header class="logo">
-        <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="dashboard.php"> <span id="logo"> <h1>CRM</h1></span> 
+        <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="dashboard.php"> <span id="logo"> <h1>CMS</h1></span> 
             <!--<img id="logo" src="" alt="Logo"/>--> 
         </a> 
     </header>
@@ -34,25 +34,25 @@ foreach($results as $row)
         <ul id="menu" >
             <li><a href="dashboard.php"><i class="fa fa-tachometer"></i> <span>Dashboard</span></a></li>
 
-            <!--<li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> Services</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+            <li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> Menu</span> <span class="fa fa-angle-right" style="float: right"></span></a>
                 <ul id="menu-academico-sub" >
-                    <li id="menu-academico-avaliacoes" ><a href="add-services.php"> Add Services</a></li>
-                    <li id="menu-academico-boletim" ><a href="manage-services.php">Manage Services</a></li>
+                    <li id="menu-academico-avaliacoes" ><a href="add-menu.php"> Add Menu</a></li>
+                    <li id="menu-academico-boletim" ><a href="manage-menu.php">Manage Menu</a></li>
                    
                 </ul>
-            </li>-->
+            </li>
             <li><a href="add-client.php"><i class="fa fa-user"></i> <span>Add Clients</span></a></li>
             <li><a href="manage-client.php"><i class="fa fa-table"></i> <span>Clients List</span></a></li>
-           <!-- <li><a href="invoices.php"><i class="fa fa-file-text-o"></i> <span>Invoices</span></a></li>-->
+            <li><a href="invoices.php"><i class="fa fa-file-text-o"></i> <span>Invoices</span></a></li>
 
-            <!--<li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> Reports</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+            <!-- <li id="menu-academico" ><a href="#"><i class="fa fa-table"></i> <span> Reports</span> <span class="fa fa-angle-right" style="float: right"></span></a>
                 <ul id="menu-academico-sub" >
                     <li id="menu-academico-avaliacoes" ><a href="bwdates-reports-ds.php"> B/w dates Reports</a></li>
                     <li id="menu-academico-boletim" ><a href="sales-reports.php">Sales Reports</a></li>
                    
                 </ul>
-            </li>-->
-            <!--<li><a href="search-invoices.php"><i class="fa fa-search"></i> <span>Search Invoice</span></a></li>-->
+            </li> -->
+            <li><a href="search-invoices.php"><i class="fa fa-search"></i> <span>Search Invoice</span></a></li>
             
       
         </ul>

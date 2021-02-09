@@ -10,7 +10,7 @@ if (strlen($_SESSION['clientmsaid']==0)) {
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Client Management Sysytem || Manage Services </title>
+	<title>Client Management Sysytem || Manage Menu </title>
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!-- Bootstrap Core CSS -->
 	<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
@@ -40,14 +40,14 @@ if (strlen($_SESSION['clientmsaid']==0)) {
 					<div class="sub-heard-part">
 						<ol class="breadcrumb m-b-0">
 							<li><a href="dashboard.php">Home</a></li>
-							<li class="active">Manage Services</li>
+							<li class="active">Manage Menu</li>
 						</ol>
 					</div>
 					<!--//sub-heard-part-->
 					<div class="graph-visual tables-main">
 						
 					
-						<h3 class="inner-tittle two">Manage Services </h3>
+						<h3 class="inner-tittle two">Manage Menu </h3>
 						<div class="graph">
 							<div class="tables">
 								<table class="table" border="1"> <thead> <tr> <th>#</th> 
@@ -76,7 +76,7 @@ foreach($results as $row)
 									        <td><?php  echo htmlentities($row->ServicePrice);?></td>
 									         <td><?php  echo htmlentities($row->CreationDate);?></td> 
 									         
-									        <td><a href="edit-services-details.php?editid=<?php echo $row->ID;?>">Edit</a></td>
+									        <td><a href="edit-menu-details.php?editid=<?php echo $row->ID;?>">Edit</a></td>
 									     </tr>
 									     <?php $cnt=$cnt+1;}} ?>
 									     </tbody> </table> 
