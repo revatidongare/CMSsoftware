@@ -2489,8 +2489,8 @@ td span.fam,span.mar,span.ur,span.work {
 }
 .graph h4{
     font-size: 2em;
-    text-align: center;
-    margin-bottom: 1em;
+   /* text-align: center;
+    margin-bottom: 1em;*/
 }
 
 .grid-graph span {

@@ -19,7 +19,7 @@ if($query->rowCount() > 0)
 {
 foreach($results as $row)
 {               ?>
-        <a href="dashboard.php"><img src="images/images.jpg" height="70" width="70"></a>
+        <a href="dashboard.php"><img src="images/4seasonslogo.png" height="70" width="70"></a>
         <a href="dashboard.php"><span class=" name-caret"><?php  echo $row->AdminName;?></span></a>
         
         <?php $cnt=$cnt+1;}} ?>

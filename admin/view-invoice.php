@@ -64,19 +64,31 @@ if($query->rowCount() > 0)
 foreach($results as $row)
 {               ?>
 						<div class="graph">
-							<div class="tables">
-								<h4>Invoice #<?php echo $invid;?></h4>
-													<table class="table table-bordered" width="100%" border="1"> 
+							<div class="container">
+								<div class="row">
+									<div class="col-lg-4" align="left">
+										<h4>Invoice #<?php echo $invid;?></h4>
+									</div>
+									<div class="col-lg-6" align="right">
+										<img src="images/4seasonslogo.png" width="20%" >
+									</div>
+									
+							</div>
+							</div>
+							
+							<div class="tables">					
+								
+									<table class="table table-bordered" width="100%" border="1"> 
 <tr>
 <th colspan="8">Client Details</th>	
 </tr>
 							 <tr> 
-								<th>Comapny Name</th> 
-								<td><?php  echo htmlentities($row->CompanyName);?></td>
-								<th>Contact Name</th> 
-								<td><?php  echo htmlentities($row->ContactName);?></td> 
+								<th> Name</th> 
+								<td><?php  echo htmlentities($row->CustomerName);?></td>
+								<!-- <th>Contact Name</th>  -->
+								<!-- <td><?php  echo htmlentities($row->ContactName);?></td>  -->
 								<th>Contact no.</th> 
-								<td><?php  echo htmlentities($row->Workphnumber);?></td>
+								<td><?php  echo htmlentities($row->Otherphnumber);?></td>
 								<th>Email </th> 
 								<td><?php  echo htmlentities($row->Email);?></td>
 							</tr> 
@@ -130,6 +142,34 @@ $gtotal+=$subtotal;
 <th><?php echo "$".$gtotal?></th>	
 
 </tr>
+<tr>
+	<?php 
+	$percentage = 2.5; 
+$cgst = ($percentage / 100) * $gtotal; ?>
+<th colspan="2" style="text-align:center">CGST</th>
+<th><?php echo "$".$cgst?></th>	
+
+</tr>
+
+<tr>
+	<?php 
+	$percentage = 2.5; 
+$sgst = ($percentage / 100) * $gtotal; ?>
+<th colspan="2" style="text-align:center">SGST</th>
+<th><?php echo "$".$sgst?></th>	
+
+</tr>
+
+<tr>
+	<?php 
+	$total123 = $sgst + $cgst; 
+$total1234 = $total123 + $gtotal; ?>
+<th colspan="2" style="text-align:center">Total Payable</th>
+<th><?php echo "$".$total1234?></th>	
+
+</tr>
+
+
 </table>
 <p style="margin-top:1%"  align="center">
   <i class="fa fa-print fa-2x" style="cursor: pointer;"  OnClick="CallPrint(this.value)" ></i>
